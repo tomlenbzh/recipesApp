@@ -1,0 +1,21 @@
+<h1>{{ recipe.name }} - {{ recipe.country }}</h1>
+<p>{{ recipe.people }} personnes</p>
+
+<h1>Temps: {{ recipe.time.total }}</h1>
+<p>Préparation: {{ recipe.time.prep }}</p>
+<p>Cuisson: {{ recipe.time.cooking }}</p>
+
+<h1>Ingrédients:</h1>
+<div class="ingredients-list" *ngFor="let ingredient of recipe.ingredients">
+  <p class="ingredient">{{ ingredient }}</p>
+</div>
+
+<h1>Ingrédients:</h1>
+<div class="ingredients-list" *ngFor="let ingredient of recipe.ingredients">
+  <p class="ingredient">{{ ingredient }}</p>
+</div>
+
+<h1>Préparation:</h1>
+<div class="preparation-instructions" *ngFor="let instruction of recipe.instructions">
+  <p class="instructions">{{ instruction.order }}. {{ instruction.text }}</p>
+</div>

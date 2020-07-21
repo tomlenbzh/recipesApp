@@ -1,1 +1,3 @@
-<p>home works!</p>
+<div *ngFor="let recipe of recipeList | async; index as i">
+  <app-recipe-card [recipe]="recipe"></app-recipe-card>
+</div>
